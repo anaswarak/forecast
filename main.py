@@ -43,7 +43,6 @@ def extractData(url,key,lat,lon, startingDay, days):
     return records
 
 
-API_KEY="secret"
 sampleLat="9.9312"
 sampleLong="76.2673"
 
