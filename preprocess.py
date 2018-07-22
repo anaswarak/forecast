@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from datetime import datetime, timedelta  
-import time  
-from collections import namedtuple  
+
 import pandas as pd  
 import matplotlib.pyplot as plt  
 
@@ -41,21 +39,21 @@ spread['outliers'] = (spread['min']<(spread['25%']-(3*IQR)))|(spread['max'] > (s
 print(spread.loc[spread.outliers,])
 df=df.dropna()
 #
-#plt.rcParams['figure.figsize'] = [14, 8]
-#df.humidity_1.hist()
-#plt.title('Distribution of humidity_1')
-#plt.xlabel('humidity_1')
-#plt.show() 
-#
-#df.pressure_1.hist()
-#plt.title('Distribution of pressure_1')
-#plt.xlabel('pressure_1')
-#plt.show()
-#
-#df.minTemp_1.hist()
-#plt.title('Distribution of mintemp_1')
-#plt.xlabel('mintemp_1')
-#plt.show()
+plt.rcParams['figure.figsize'] = [14, 8]
+df.humidity_1.hist()
+plt.title('Distribution of humidity_1')
+plt.xlabel('humidity_1')
+plt.show() 
+
+df.pressure_1.hist()
+plt.title('Distribution of pressure_1')
+plt.xlabel('pressure_1')
+plt.show()
+
+df.minTemp_1.hist()
+plt.title('Distribution of mintemp_1')
+plt.xlabel('mintemp_1')
+plt.show()
 print(df.shape)
 
 df.to_csv('weather_added_features.csv')

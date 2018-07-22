@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta  
-import time  
+import time
 from collections import namedtuple  
 import pandas as pd  
 import requests
@@ -53,8 +53,8 @@ N=90
 
 record=pickle.load(open('weather_data.p', 'rb'))
 df = pd.DataFrame(record, columns=features).set_index('date') 
-df.to_csv('weather_frame.csv')
-df.to_hdf('weather_frame.h5','df')
+df.to_csv('weather_frame2.csv')
+df.to_hdf('weather_frame2.h5','df')
 
 #iconDict={"wind":1, "rain":3, "partly-cloudy-day":2, "fog":4,
 #          "partly-cloudy-night":2}
